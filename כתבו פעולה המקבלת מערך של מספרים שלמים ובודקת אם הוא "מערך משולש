@@ -1,0 +1,15 @@
+def fun_arr(arr):
+    count = 0
+    lens1 = len(arr) - len(arr)//3
+    lens2 = len(arr) - 2 * (len(arr)//3)
+    if len(arr) % 3 == 0:
+        for i in range(0, len(arr)//3):
+            if arr[i] == arr[lens1] and arr[i] == arr[lens2]:
+                lens1 += 1
+                lens2 += 1
+                count += 1
+    if count == len(arr)//3:
+        return True
+    else:
+        return False
+print(fun_arr([1,2,2,2,3,3]))
